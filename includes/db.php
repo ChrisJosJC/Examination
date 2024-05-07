@@ -1,9 +1,11 @@
 <?php 
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "1234";
-    $dbname = "examination";
+    $env = parse_ini_file('.env');
+
+    $servername = $env["SERVERNAME"];
+    $username = $env["USERNAME"];
+    $password = $env["PASSWORD"];
+    $dbname = $env["DBNAME"];
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
